@@ -1,0 +1,14 @@
+{
+  "branches": [
+    "master", "next", "+([0-9])?(.{+([0-9]),x}).x",
+    {"name": "rc", "prerelease": true}
+  ],
+  "repositoryUrl": "https://github.com/victor-assis/hollow",
+  "githubOptions": {
+    "assets": [
+      {"path": "dist/tmp/hollow-${PROJECT_NAME}.zip", "label": "${PROJECT_NAME} distribution"}
+    ]
+  },
+  "outputPath": "dist/${PROJECT_NAME}",
+  "gitAssets": ["CHANGELOG.md"]
+}

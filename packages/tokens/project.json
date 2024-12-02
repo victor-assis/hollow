@@ -23,6 +23,15 @@
         ]
       }
     },
+    "semantic-release": {
+      "executor": "@theunderscorer/nx-semantic-release:semantic-release",
+      "options": {
+        "github": true,
+        "changelog": true,
+        "npm": true,
+        "tagFormat": "styles-v${VERSION}"
+      }
+    },
     "zip": {
       "executor": "nx:run-commands",
       "options": {

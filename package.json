@@ -17,7 +17,7 @@
     "stylelint": "nx affected -t stylelint",
     "zip": "nx run-many -t zip",
     "clear": "shx rm -rf dist && shx rm -rf coverage",
-    "release": "nx run-many -t release --parallel=1"
+    "release": "nx affected -t semantic-release --parallel=false"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
