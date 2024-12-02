@@ -12,8 +12,9 @@
         "outputPath": "dist/tools",
         "main": "packages/tools/src/index.ts",
         "tsConfig": "packages/tools/tsconfig.lib.json",
-        "format": ["cjs"],
-        "declarationRootDir": "packages/tools/src"
+        "format": ["esm", "cjs"],
+        "declarationRootDir": "packages/tools/src",
+        "assets": ["packages/tools/package.json"]
       }
     },
     "docs": {
@@ -30,7 +31,7 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "semantic-release --extends=./packages/tools/.release.json"
+          "npx --no-install semantic-release -e semantic-release-monorepo"
         ]
       }
     },

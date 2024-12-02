@@ -1,5 +1,5 @@
 {
-  "name": "@hollow/tools",
+  "name": "@houf/tools",
   "version": "0.0.1",
   "dependencies": {},
   "type": "module",
@@ -8,5 +8,10 @@
   "files": [
     "dist",
     "!**/*.tsbuildinfo"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest",
+    "access": "public"
+  }
 }

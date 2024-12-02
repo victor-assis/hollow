@@ -62,4 +62,14 @@ Branches que não geram links temporários para teste:
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
 
----
+## 📓 Metodologias
+
+#### CSS
+
+- **BOM**
+- **RSCSS**: é uma abordagem para estruturar estilos CSS de maneira organizada e previsível, com base em boas práticas e simplicidade.
+
+#### Git
+
+- **Fast Forward**: No contexto de controle de versão (como Git), Fast Forward refere-se a um tipo de merge onde o ponteiro da branch de destino é simplesmente avançado para apontar para o commit mais recente da branch de origem, sem criar um novo commit de merge.
+- **Truck based development**: É um modelo de controle de versão de software que centraliza e simplifica a codificação de uma aplicação. Com ele, os desenvolvedores conseguem mesclar pequenas atualizações, combinar recursos e corrigir bugs em um tronco principal, sem o uso de ramificações.

@@ -1,5 +1,5 @@
 {
-  "name": "@hollow/styles",
+  "name": "@houf/styles",
   "version": "1.0.0",
   "main": "css/styles.css",
   "publishConfig": {

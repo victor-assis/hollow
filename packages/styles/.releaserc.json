@@ -4,11 +4,21 @@
     "master", "next", "+([0-9])?(.{+([0-9]),x}).x",
     {"name": "rc", "prerelease": true}
   ],
+  "tagFormat": "styles-v${version}",
   "plugins": [
     "@semantic-release/commit-analyzer",
-    ["@semantic-release/release-notes-generator", {
-      "config": "cz-conventional-changelog"
-    }],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "angular",
+        "parserOpts": {
+          "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
+        },
+        "writerOpts": {
+          "commitsSort": ["subject", "scope"]
+        }
+      }
+    ],
     ["@semantic-release/changelog",
       {
         "changelogFile": "packages/styles/CHANGELOG.md"
@@ -16,12 +26,12 @@
     ],
     ["@semantic-release/github", {
       "assets": [
-        {"path": "../../tmp/hollow-style.zip", "label": "Style distribution"}
+        {"path": "dist/tmp/hollow-styles.zip", "label": "Styles distribution"}
       ]
     }],
     ["@semantic-release/npm", {
-      "pkgRoot": "../../dist/style",
-      "tarballDir": "../../dist/style"
+      "pkgRoot": "dist/styles",
+      "tarballDir": "dist/styles"
     }],
     ["@semantic-release/git", {
       "assets": ["CHANGELOG.md"],

@@ -1,5 +1,5 @@
 {
-  "name": "@hollow/source",
+  "name": "@hollw/source",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
@@ -9,7 +9,6 @@
     "start": "run-s start:*",
     "start:preview": "vite apps/preview",
     "start:tokens": "nx watch --projects=tokens -- nx run tokens:build",
-    "start:styles": "nx run styles:start",
     "build": "nx run-many -t build --prod",
     "postbuild": "npm run zip",
     "docs": "nx affected -t docs",
@@ -18,8 +17,7 @@
     "stylelint": "nx affected -t stylelint",
     "zip": "nx run-many -t zip",
     "clear": "shx rm -rf dist && shx rm -rf coverage",
-    "release": "nx affected -t release --parallel=1",
-    "semantic-release": "semantic-release"
+    "release": "nx run-many -t release --parallel=1"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
@@ -39,9 +37,11 @@
     "@swc-node/register": "~1.10.9",
     "@swc/core": "~1.9.2",
     "@swc/helpers": "~0.5.15",
+    "@theunderscorer/nx-semantic-release": "^2.12.0",
     "@types/jest": "^29.5.14",
     "@types/node": "22.9.1",
     "bestzip": "^2.2.1",
+    "cz-conventional-changelog": "^3.3.0",
     "esbuild": "^0.24.0",
     "eslint": "^9.15.0",
     "fs-extra": "^11.2.0",

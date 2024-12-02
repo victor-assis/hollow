@@ -50,7 +50,7 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": [
-          "semantic-release --extends=./packages/styles/.release.json"
+          "npx --no-install semantic-release -e semantic-release-monorepo"
         ]
       }
     },
